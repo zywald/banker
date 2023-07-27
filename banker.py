@@ -8,10 +8,6 @@ st.title("VIP Client Call Preparation Assistant")
 # OpenAI API Key
 openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 
-# Instantiate LLM model
-llm = OpenAI(model_name='gpt-4',
-             openai_api_key=openai_api_key, temperature=0.8)
-
 # Client information input form
 with st.form("myform"):
     investment_portfolio = st.multiselect('Investment Portfolio', [
@@ -25,6 +21,9 @@ with st.form("myform"):
     if not openai_api_key:
         st.info("Please add your OpenAI API key to continue.")
     elif submitted:
+        # Instantiate LLM model
+        llm = OpenAI(model_name='gpt-4',
+                    openai_api_key=openai_api_key, temperature=0.8)
         try:
             # Define common instructions
             common_instructions = ("You are an expert banking assistant and I am a private banker preparing for a call with one of my VIP clients. Your role is to help me"
