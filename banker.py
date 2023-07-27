@@ -6,7 +6,7 @@ from openai.error import OpenAIError
 st.title("VIP Client Call Preparation Assistant")
 
 # OpenAI API Key
-openai_api_key = "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"
+openai_api_key = "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"
 # openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 
 # Instantiate LLM model
