@@ -6,8 +6,8 @@ from openai.error import OpenAIError
 st.title("VIP Client Call Preparation Assistant")
 
 # OpenAI API Key
-openai_api_key = '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'
-# openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
+#openai_api_key = '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'
+openai_api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 
 # Instantiate LLM model
 llm = OpenAI(model_name='gpt-4',
